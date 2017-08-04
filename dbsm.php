@@ -59,7 +59,7 @@ if(!$db) {
             mail($notifyEmail, $subject, $message, $headers);
         }
         else {
-                echo "It did ping in the last hour - send NO email!<br>\n";
+             // It did ping in the last hour - send NO email! - keep else for future use
         }
     }
     
