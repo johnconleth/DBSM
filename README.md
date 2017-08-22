@@ -9,7 +9,7 @@ Copy dbsm-setup.php and dbsm.php into a folder on your web hosting (I use a subd
 Run dbsm-setup.php to create a database and other things that are needed. If you don't get any error messages when you run dbsm-setup.php you can delete the file. Using the example above you would run the file via: http://YourWebsite.com/dbsm/dbsm-setup.php
 
 **dbsm.php**
-Edit dbsm.php and add the names of the Remote Desktops you want to monitor.
+Edit dbsm.php and add the names of the Remote Desktops you want to monitor, along with an email address that you want notifications to go to.
 ```php
 $notifyEmail = 'youremail@address.com'; // << enter the email address you want to receive notifications to
 $serverNames = ['servername',]; // << List all servers - example: ['server1','vps2','myvps',];
@@ -37,5 +37,7 @@ Download DBSM.exe onto your Remote Desktop and run it.
 **CLICK RUN ON SCHEDULE**
 When you click 'Run on Schedule' the program will run the backup automatically at 1.30AM and will run the uptime monitor every hour on the hour.
 
-**NOTE**
-I have not used a database so DBSM cannot remember the details you enter. If you close DBSM.exe you will have to enter all the detail again so I suggest you copy all the details into a text file and keep it with DBSM.exe so you can easily copy the detail back in after a server restart etc.
+**NOTES**
+I have not used a database so DBSM cannot remember the details you enter. If you close DBSM.exe you will have to enter all the details again so I suggest you copy all the details into a text file and keep it with DBSM.exe so you can easily copy the detail back in after a server restart etc.
+
+Notification emails come from noreply@YourWebsite.com so remember to whitelist these emails as they will most likely go straight into SPAM if you don't setup a rule to mark the emails as safe.
